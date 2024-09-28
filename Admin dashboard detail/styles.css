@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url("https://wallpapercave.com/wp/wp2467148.png"); /* Add a textured background */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.admin-dashboard-container {
+  background-color: rgba(255, 255, 255, 0.5); /* Translucent white background */
+  border-radius: 12px;
+  padding: 40px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 50px auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: bold;
+  color: #004085; /* Strong dark blue color */
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #004085;
+  padding-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+
+th,
+td {
+  padding: 15px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #004085;
+  color: white;
+}
+
+td {
+  background-color: #f7f7f7;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar span {
+  display: block;
+  height: 20px;
+  background-color: #28a745;
+}
+
+a {
+  color: #007bff;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+select,
+button {
+  padding: 10px 15px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: 2px solid #004085;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button {
+  background-color: #004085;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#report-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: green;
+}

@@ -1,0 +1,106 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Background */
+body {
+  background-image: url("https://wallpapercave.com/wp/wp2467148.png"); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Container */
+.dashboard-container {
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent container */
+  border-radius: 15px;
+  padding: 40px;
+  width: 85%;
+  max-width: 1200px;
+  margin: 50px auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Professional box shadow */
+  backdrop-filter: blur(8px); /* Blurring background behind container */
+}
+
+/* Headings */
+h1,
+h2 {
+  /* Strong dark blue color */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.1rem;
+  color: #004085;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #000408;
+  font-weight: 600;
+  border-bottom: 2px solid #000307;
+  padding-bottom: 10px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #004085; /* Strong header color */
+  color: #fff;
+  font-weight: bold;
+}
+
+td {
+  background-color: #f7f7f7;
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Highlight row on hover */
+}
+
+/* Action Buttons */
+.actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+button {
+  padding: 12px 30px;
+  background-color: #004085;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Subtle hover effect */
+}
+
+button:focus {
+  outline: none;
+}

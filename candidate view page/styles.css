@@ -1,0 +1,193 @@
+/* Base Styling */
+body {
+  background-image: url("https://wallpapercave.com/wp/wp2467148.png");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Candidate Profile Container */
+.candidate-profile-container {
+  padding: 30px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent container */
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+h2 {
+  text-align: left;
+  color: #004085;
+  margin-top: 30px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* Profile Picture Section */
+.profile-picture-section {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #004085;
+  margin-bottom: 10px;
+  cursor: pointer;
+  object-fit: cover; /* Ensures image fits within the circular frame */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hidden File Input */
+.hidden {
+  display: none;
+}
+
+/* Info Section */
+.info-section .info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.info-section p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Certifications Section */
+.certifications-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.certifications-section ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.certifications-section ul li span {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+.certifications-section button {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.certifications-section button i {
+  margin-right: 5px;
+}
+
+/* Add Certificate Button */
+#add-certificate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#add-certificate-btn i {
+  margin-right: 5px;
+}
+
+/* Recommendations Section */
+.recommendations-section p {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: #444;
+}
+
+/* Edit Button */
+#edit-candidate-btn {
+  padding: 12px 25px;
+  background-color: #004085;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 30px auto;
+}
+
+#edit-candidate-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Certificate Upload Styles */
+.upload-certificates {
+  margin-top: 20px;
+}
+
+.upload-certificates label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.upload-certificates input[type="file"] {
+  margin-bottom: 10px;
+}
+
+#certificate-upload-message {
+  text-align: center;
+  color: green;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .candidate-profile-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .info-section .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications-section ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .certifications-section button {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+}

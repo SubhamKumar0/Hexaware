@@ -15,7 +15,7 @@ body {
 
 /* Container for the form */
 .container {
-  background-color: rgba(255, 255, 255, 0.8); /* Translucent background */
+  background-color: rgba(255, 255, 255, 0.5); /* Translucent background */
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);

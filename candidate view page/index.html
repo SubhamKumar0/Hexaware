@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candidate Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Material Icons for icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="candidate-profile-container">
+      <h1>Candidate Profile</h1>
+
+      <!-- Profile Image Section -->
+      <div class="profile-picture-section">
+        <img id="profile-pic" src="default-profile.png" alt="Profile Picture" />
+        <!-- Hidden file input for uploading profile image -->
+        <input
+          type="file"
+          id="profile-image-upload"
+          accept="image/*"
+          class="hidden"
+        />
+      </div>
+
+      <!-- Candidate Information -->
+      <section class="info-section">
+        <h2>Personal Information</h2>
+        <div class="info-grid">
+          <div>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <p><strong>Degree:</strong> B.Tech Computer Science</p>
+          </div>
+          <div>
+            <p><strong>Specialization:</strong> Data Science</p>
+            <p><strong>Batch:</strong> Data Engineering</p>
+            <p>
+              <strong>LinkedIn:</strong>
+              <a href="https://www.linkedin.com/in/johndoe" target="_blank"
+                >johndoe</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="certifications-section">
+        <h2>Certifications</h2>
+        <ul id="certificates-list">
+          <li>
+            <span>AWS Certification</span>
+            <button class="change-certificate">
+              <i class="material-icons">edit</i> Change
+            </button>
+            <button class="remove-certificate">
+              <i class="material-icons">delete</i> Remove
+            </button>
+          </li>
+          <li>
+            <span>Python for Data Science (Coursera)</span>
+            <button class="change-certificate">
+              <i class="material-icons">edit</i> Change
+            </button>
+            <button class="remove-certificate">
+              <i class="material-icons">delete</i> Remove
+            </button>
+          </li>
+        </ul>
+        <button id="add-certificate-btn">
+          <i class="material-icons">add</i> Add New Certificate
+        </button>
+        <input
+          type="file"
+          id="new-certificate-upload"
+          accept="application/pdf"
+          class="hidden"
+        />
+        <div id="certificate-upload-message"></div>
+      </section>
+
+      <!-- AI Recommendations -->
+      <section class="recommendations-section">
+        <h2>AI Recommendations</h2>
+        <p id="ai-recommendations">
+          You haven't received any recommendations yet.
+        </p>
+      </section>
+
+      <!-- Edit Candidate Details Button -->
+      <button id="edit-candidate-btn">Edit Candidate Details</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
