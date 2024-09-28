@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Navigator - Candidate Registration</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Candidate Registration Form</h1>
+      <form id="candidate-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">
+              <i class="material-icons">person</i>
+              Name:
+            </label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              <i class="material-icons">email</i>
+              Email:
+            </label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="degree">
+              <i class="material-icons">school</i>
+              Degree:
+            </label>
+            <input type="text" id="degree" name="degree" required />
+          </div>
+
+          <div class="form-group">
+            <label for="specialization">
+              <i class="material-icons">book</i>
+              Specialization:
+            </label>
+            <input type="text" id="specialization" name="specialization" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone_number">
+              <i class="material-icons">phone</i>
+              Phone Number:
+            </label>
+            <input type="text" id="phone_number" name="phone_number" />
+          </div>
+
+          <div class="form-group">
+            <label for="certifications">
+              <i class="material-icons">cloud_upload</i>
+              Certifications (Upload Multiple):
+            </label>
+            <input
+              type="file"
+              id="certifications"
+              name="certifications"
+              accept=".pdf, .jpg, .jpeg, .png, .docx"
+              multiple
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="internships">
+              <i class="material-icons">assignment</i>
+              Internship Details:
+            </label>
+            <textarea id="internships" name="internships"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="courses">
+              <i class="material-icons">local_library</i>
+              Courses Completed:
+            </label>
+            <textarea id="courses" name="courses"></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="linkedin">
+              <i class="material-icons">linkedin</i>
+              LinkedIn Profile:
+            </label>
+            <input type="url" id="linkedin" name="linkedin_profile" />
+          </div>
+
+          <div class="form-group">
+            <label for="github">
+              <i class="material-icons">code</i>
+              GitHub Profile:
+            </label>
+            <input type="url" id="github" name="github_profile" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="programming_languages">
+            <i class="material-icons">computer</i>
+            Programming Languages Known:
+          </label>
+          <textarea
+            id="programming_languages"
+            name="programming_languages"
+          ></textarea>
+        </div>
+
+        <button type="submit">
+          <i class="material-icons">send</i>
+          Register
+        </button>
+      </form>
+      <div id="message"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
