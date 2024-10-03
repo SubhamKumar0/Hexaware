@@ -1,0 +1,122 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background settings */
+body {
+  background-image: url("https://wallup.net/wp-content/uploads/2019/10/657096-technology-robot.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Arial", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start; /* Login box on the left */
+  align-items: center;
+  position: relative;
+}
+
+/* AI SKILL NAVIGATOR title */
+.site-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.site-title h1 {
+  font-size: 36px;
+  background: url("https://wallpapercave.com/wp/wp21877.jpg");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Login container and box */
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5%;
+}
+
+.login-box {
+  background-image: url("https://wallpapercave.com/wp/wp21877.jpg");
+  padding: 80px;
+  border-radius: 10px;
+  width: 500px;
+  color: white;
+  margin-left: 15%;
+  border: #fff;
+  border-color: azure;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+/* Input field styles */
+.input-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+}
+
+.input-field .material-icons {
+  color: #0096ff;
+  margin-right: 10px;
+}
+
+.input-field input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+  font-size: 16px;
+}
+
+.input-field input::placeholder {
+  color: #bbb;
+}
+
+/* Login button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0033cc;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn .material-icons {
+  margin-right: 8px;
+}
+
+/* Error message styling */
+#error-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-box {
+    width: 80%;
+    padding: 30px;
+  }
+}
