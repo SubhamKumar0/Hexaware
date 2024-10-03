@@ -1,0 +1,104 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background wallpaper */
+body {
+  font-family: "Arial", sans-serif;
+  min-height: 100vh;
+  background-image: url("https://images.interestingengineering.com/2023/11/03/image/jpeg/PkML82SufwxuhHQ1Ue7BMqObpc3Q53VM0xIYfFfq.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: transparent; /* Removed the solid background */
+}
+
+.header h1 {
+  margin-left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #0033cc; /* Changed to blue color */
+}
+
+.header-buttons {
+  display: flex;
+  margin-right: 20px;
+}
+
+.header-buttons .register-btn,
+.header-buttons .login-btn {
+  background-color: #0033cc; /* Changed to blue color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.header-buttons .register-btn span,
+.header-buttons .login-btn span {
+  margin-right: 5px;
+}
+
+/* Welcome text and button positioning */
+.content {
+  display: flex;
+  justify-content: flex-start; /* Align items at the left */
+  align-items: center;
+  height: calc(100vh - 60px); /* Adjust height to account for header */
+  padding: 100px 5%; /* Increased padding to position text downwards */
+}
+
+.welcome-text {
+  margin-top: 100px; /* Add extra margin to move it down */
+}
+
+.welcome-text h2 {
+  font-size: 24px;
+  color: white;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.get-started-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #0033cc; /* Changed to blue color */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header-buttons .register-btn,
+  .header-buttons .login-btn {
+    padding: 8px 15px;
+  }
+
+  .welcome-text h2 {
+    font-size: 20px;
+  }
+}
