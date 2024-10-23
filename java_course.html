@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Course Progress Tracker</title>
+
+    <!-- Google Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      h1 {
+        text-align: center;
+      }
+      .topic-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .topic {
+        flex-basis: 30%;
+        margin-bottom: 20px;
+      }
+      .topic button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .topic button.completed {
+        background-color: #aaa;
+        cursor: not-allowed;
+      }
+      .topic button:hover:not(.completed) {
+        background-color: #45a049;
+      }
+      .progress {
+        background-color: #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .progress-bar {
+        background-color: #4caf50;
+        width: 0;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        color: white;
+      }
+      .status {
+        font-size: 18px;
+        text-align: center;
+      }
+      .ai-suggest-button {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+      }
+      .ai-suggest-button:hover {
+        background-color: #45a049;
+      }
+      .material-icons {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Java Course Progress Tracker</h1>
+    </header>
+
+    <div class="container">
+      <h2>Complete the Java topics</h2>
+
+      <div class="topic-list">
+        <!-- 15 Java Topics -->
+        <div class="topic">
+          <button onclick="location.href='java_topic_1.html'">
+            Topic 1: Introduction to Java
+          </button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(2)">
+            Topic 2: Variables and Data Types
+          </button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(3)">Topic 3: Control Flow</button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(4)">
+            Topic 4: Object-Oriented Programming
+          </button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(5)">
+            Topic 5: Inheritance and Polymorphism
+          </button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(6)">
+            Topic 6: Interfaces and Abstract Classes
+          </button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(7)">
+            Topic 7: Collections Framework
+          </button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(8)">
+            Topic 8: Exception Handling
+          </button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(9)">Topic 9: Generics</button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(10)">Topic 10: Multithreading</button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(11)">Topic 11: File I/O</button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(12)">
+            Topic 12: Lambda Expressions
+          </button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(13)">Topic 13: Streams API</button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(14)">Topic 14: JavaFX</button>
+        </div>
+        <div class="topic">
+          <button onclick="completeTopic(15)">Topic 15: JDBC</button>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar">0%</div>
+      </div>
+
+      <div class="status" id="status">
+        You have completed 0% of the Java course.
+      </div>
+    </div>
+
+    <!-- AI Suggestion Button -->
+    <button class="ai-suggest-button" onclick="suggestFromAI()">
+      <span class="material-icons">psychology</span>
+    </button>
+
+    <script>
+      let totalTopics = 15;
+      let completedTopics = [];
+
+      function completeTopic(topicNumber) {
+          if (!completedTopics.includes(topicNumber)) {
+              completedTopics.push(topicNumber);
+              document.querySelectorAll('.topic button')[topicNumber - 1].classList.add('completed');
+              document.querySelectorAll('.topic button')[topicNumber - 1].textContent = Topic ${topicNumber} (Completed);
+              updateProgress();
+          } else {
+              alert("This topic has already been completed!");
+          }
+      }
+
+      function updateProgress() {
+          let completionPercentage = (completedTopics.length / totalTopics) * 100;
+          document.getElementById("progress-bar").style.width = completionPercentage + "%";
+          document.getElementById("progress-bar").textContent = Math.round(completionPercentage) + "%";
+          document.getElementById("status").textContent = You have completed ${Math.round(completionPercentage)}% of the Java course.;
+
+          if (completionPercentage === 100) {
+              document.getElementById("status").textContent = "Congratulations! You have completed the entire Java course!";
+          }
+      }
+
+      function suggestFromAI() {
+          for (let i = 1; i <= totalTopics; i++) {
+              if (!completedTopics.includes(i)) {
+                  alert(AI Suggests: Please complete Topic ${i} next.);
+                  return;
+              }
+          }
+          alert("All topics are completed!");
+      }
+    </script>
+  </body>
+</html>

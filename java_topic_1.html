@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Topic 1: Introduction to Java</title>
+
+    <!-- Google Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      h1 {
+        text-align: center;
+      }
+      .topic-content {
+        margin-bottom: 20px;
+      }
+      .completion-status {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .completion-status button {
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        color: black;
+        border: 1px solid #4caf50;
+      }
+      .completion-status button:hover {
+        background-color: #f1f1f1;
+      }
+      .quiz-section {
+        margin-bottom: 20px;
+      }
+      .quiz-section input {
+        margin-right: 10px;
+      }
+      .quiz-section button {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .quiz-section button:hover {
+        background-color: #45a049;
+      }
+      .ai-feedback {
+        margin-top: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Java Topic 1: Introduction to Java</h1>
+    </header>
+
+    <div class="container">
+      <!-- Learning Material Section -->
+      <div class="topic-content">
+        <h2>Learning Material</h2>
+        <p>
+          This is where the AI-generated content for "Introduction to Java" will
+          be displayed.
+        </p>
+        <p>For example:</p>
+        <ul>
+          <li>Overview of Java programming language.</li>
+          <li>Basic Java syntax and structure.</li>
+          <li>Importance of JVM and platform independence.</li>
+          <li>Examples of Java applications.</li>
+        </ul>
+      </div>
+
+      <!-- Completion Status Section -->
+      <div class="completion-status">
+        <h2>Completion Status</h2>
+        <button id="completed-btn">Mark as Completed</button>
+        <button id="not-completed-btn">Mark as Not Completed</button>
+      </div>
+
+      <!-- Quiz Section -->
+      <div class="quiz-section">
+        <h2>Quiz for Topic 1</h2>
+        <form id="quiz-form">
+          <p>1. What is the main feature of Java?</p>
+          <label
+            ><input type="radio" name="q1" value="correct" /> Platform
+            Independence</label
+          ><br />
+          <label><input type="radio" name="q1" value="wrong" /> Speed</label
+          ><br />
+
+          <p>2. What does JVM stand for?</p>
+          <label
+            ><input type="radio" name="q2" value="correct" /> Java Virtual
+            Machine</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="wrong" /> Java Visual
+            Machine</label
+          ><br />
+
+          <p>3. Java is a ...?</p>
+          <label
+            ><input type="radio" name="q3" value="correct" /> Object-oriented
+            language</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="wrong" /> Functional
+            programming language</label
+          ><br />
+
+          <p>4. What is the file extension for Java bytecode files?</p>
+          <label><input type="radio" name="q4" value="correct" /> .class</label
+          ><br />
+          <label><input type="radio" name="q4" value="wrong" /> .java</label
+          ><br />
+
+          <p>5. Which company originally developed Java?</p>
+          <label
+            ><input type="radio" name="q5" value="correct" /> Sun
+            Microsystems</label
+          ><br />
+          <label><input type="radio" name="q5" value="wrong" /> Oracle</label
+          ><br />
+
+          <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+      </div>
+
+      <!-- AI Feedback -->
+      <div class="ai-feedback" id="ai-feedback"></div>
+    </div>
+
+    <script>
+      // Completion Status
+      document
+        .getElementById("completed-btn")
+        .addEventListener("click", function () {
+          alert("You have marked this topic as completed.");
+        });
+
+      document
+        .getElementById("not-completed-btn")
+        .addEventListener("click", function () {
+          alert("You have marked this topic as not completed.");
+        });
+
+      // Quiz Submission and AI Feedback
+      function submitQuiz() {
+        let correctAnswers = 0;
+
+        // Check each quiz answer
+        const form = document.getElementById("quiz-form");
+        const answers = form.elements;
+        for (let i = 0; i < answers.length; i++) {
+          if (
+            answers[i].type === "radio" &&
+            answers[i].checked &&
+            answers[i].value === "correct"
+          ) {
+            correctAnswers++;
+          }
+        }
+
+        // Display AI feedback and mark topic as completed
+        const feedback = document.getElementById("ai-feedback");
+        if (correctAnswers >= 3) {
+          feedback.innerHTML = `You scored ${correctAnswers}/5. AI suggests: Well done! Move to the next topic on "Java Data Types".`;
+          markTopicCompleted();
+        } else {
+          feedback.innerHTML = `You scored ${correctAnswers}/5. AI suggests: Retake the quiz to improve your understanding.`;
+        }
+      }
+
+      // Function to mark topic as completed
+      function markTopicCompleted() {
+        const completedBtn = document.getElementById("completed-btn");
+        const notCompletedBtn = document.getElementById("not-completed-btn");
+
+        // Change color of the completed button
+        completedBtn.style.backgroundColor = "#4CAF50";
+        completedBtn.style.color = "white";
+
+        // Disable both buttons
+        completedBtn.disabled = true;
+        notCompletedBtn.disabled = true;
+      }
+    </script>
+  </body>
+</html>
